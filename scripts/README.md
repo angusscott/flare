@@ -1,20 +1,23 @@
-# Scripts
+# FDC Examples
 
-This folder contains scripts that demonstrate, how to interact with enshrined Flare protocols and official deployed contracts.
-In depth guides can be found on the [Flare Developer Hub](https://dev.flare.network/fdc/guides/hardhat).
+This is a collection of examples on how to use the FDC protocol. Each script corresponds to one of the supported attestation types:
 
-# Directory structure
+- `AddressValidity.ts`
+- `BalanceDecreasingTransaction.ts`
+- `ConfirmedBlockHeightExists.ts`
+- `EVMTransaction.ts`
+- `JsonApi.ts`
+- `Payment.ts`
+- `ReferencedPaymentNonexistence.ts`.
 
+Scripts are run with the following command.
+
+```sh
+yarn hardhat run scripts/fdcExample/<AttestationType.ts> --network <network>
 ```
-scripts
-├── deployFTSOConsumer.ts: deploys and verifies the FtsoV2Consumer contract
-├── customFeeds: scripts used for examples of custom feed contracts
-├── fastUpdates.ts: demonstrates usage of FTSO fast updates
-├── fdcExample: basic examples for each of the supported FDC attestation types
-├── getAnchorPrices.ts: fetches and verifies anchor prices from the DA Layer
-├── proofOfReserves: an example dApp that demonstrates how the EVMTransaction and JsonApi attestation types can be used
-├── GuessingGame.ts: deploys and verifies the GuessingGame contract
-├── HelloWorld.ts: deploys and verifies the HelloWorld contract
-├── README.md
-└── tryDeployment.ts
-```
+
+You can copy the exact command from a comment at the top of each script, after the imports.
+
+The corresponding contracts are defined in `contracts/fdcExample/<AttestationType.ts>`.
+
+For an in-depth guides on how to use different attestation types, go to the [Flare Developer Hub](https://dev.flare.network/fdc/guides/hardhat).
